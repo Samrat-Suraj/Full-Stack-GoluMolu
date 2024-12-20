@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --radius: 0.5rem
+  }
+}
+
+.login{
+  background-image: url("./loginbg.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hidescroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hidescroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+
+/* @media(max-width : 500px){
+  .mobileScreen{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    width: 100vw;
+    justify-content:space-between;
+    background-color: white;
+    padding: 10px;
+  }
+} */
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  border-radius: 50%;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid blue;
+  animation: spin 1s linear infinite;
+}
