@@ -158,7 +158,7 @@ const PostDetails = () => {
                     <Send onClick={CommentHander} className="text-blue-500 cursor-pointer" />
                 </div>
 
-                <div className="flex lg:hidden items-center gap-2 mt-4 mb-10">
+                <div className="flex lg:hidden items-center gap-2 mt-4 mb-14">
                     <input
                         className="p-2 w-full rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         type="text"
