@@ -120,7 +120,7 @@ const Messages = () => {
         </div>
 
         <div className="w-full p-4 bg-white shadow-md absolute bottom-0">
-          <div className="flex items-center gap-3 mb-20 lg:mb-1">
+          <div className="flex items-center gap-3 mb-28 lg:mb-1">
             <input
               type="text"
               placeholder="Type a message..."
