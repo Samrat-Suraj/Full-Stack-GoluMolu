@@ -24,7 +24,7 @@ const HomePage = () => {
   useGetAllMyStatus()
 
   return (
-    <div className='flex justify-between h-screen'>
+    <div className='flex justify-between'>
       <LeftSideBar />
       <Feeds />
       <RightSideBar />
