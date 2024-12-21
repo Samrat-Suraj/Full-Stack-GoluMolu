@@ -113,7 +113,7 @@ const LeftSideBar = () => {
                 </div>
             </div>
 
-            <div className='lg:hidden md:hidden flex justify-center bg-white p-3 gap-1 absolute bottom-0 z-10 w-full'>
+            <div className='lg:hidden md:hidden flex justify-center bg-white p-3 gap-1 sticky  bottom-0 z-10 w-full'>
                 {sideBarItems.map((item, index) => (
                     <div
                         key={index}
