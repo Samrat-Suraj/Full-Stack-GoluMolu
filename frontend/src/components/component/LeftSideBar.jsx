@@ -113,39 +113,32 @@ const LeftSideBar = () => {
                 </div>
             </div>
 
-            <div className='relative w-full'>
-    {/* Sticky Bottom Bar with Sidebar Content */}
-    <div className='lg:hidden md:hidden flex flex-col justify-between bg-white p-3 gap-1 sticky bottom-0 z-10 w-full'>
-        {/* Sidebar Items */}
-        <div className='flex flex-col'>
-            {sideBarItems.map((item, index) => (
-                <div
-                    key={index}
-                    onClick={() => onClickHander(item.text)}
-                    className='flex relative items-center gap-3 p-3 cursor-pointer rounded-lg text-black hover:bg-gray-300 transition-all duration-200 ease-in-out'
-                >
-                    <p>{item.icon}</p>
-                    {
-                        item.text === "Notification" && notificationCount > 0 ? 
-                            <div className='h-[15px] w-[15px] flex items-center justify-center text-white font-semibold text-[8px] rounded-full left-5 top-2 bg-red-600 absolute'>
-                                {notificationCount}
-                            </div> 
-                        : null
-                    }
-                    <span className='text-sm font-semibold hidden lg:flex'>{item.text}</span>
+           <div className='lg:hidden md:hidden flex justify-center bg-white p-3 gap-1 absolute bottom-0 z-10 w-full'>
+                {sideBarItems.map((item, index) => (
+                    <div
+                        key={index}
+                        onClick={() => onClickHander(item.text)}
+                        className='flex relative items-center gap-3 p-3 cursor-pointer rounded-lg text-black hover:bg-gray-300 transition-all duration-200 ease-in-out'
+                    >
+                        <p>{item.icon}</p>
+                        {
+                            item.text === "Notification" && notificationCount > 0 ? 
+                                <div className='h-[15px] w-[15px] flex items-center justify-center text-white font-semibold text-[8px] rounded-full left-5 top-2 bg-red-600 absolute'>
+                                    {notificationCount}
+                                </div> 
+                            : null
+                        }
+                        <span className='text-sm font-semibold hidden lg:flex'>{item.text}</span>
+                    </div>
+                ))}
+                <div className='flex mt-auto'>
+                    <div onClick={() => setOpen(true)} className='flex gap-2 cursor-pointer bg-blue-600 items-center p-2 mb-1 text-white rounded-lg hover:bg-blue-500 transition-all duration-200'>
+                        <Plus size={20} />
+                        <span className='font-semibold text-[15px] hidden lg:flex'>New Post</span>
+                    </div>
                 </div>
-            ))}
-        </div>
-
-        {/* New Post Button */}
-        <div className='flex gap-2 cursor-pointer bg-blue-600 items-center p-2 mb-1 text-white rounded-lg hover:bg-blue-500 transition-all duration-200'>
-            <Plus size={20} />
-            <span className='font-semibold text-[15px] hidden lg:flex'>New Post</span>
-        </div>
-    </div>
-
-    <UploadPostDialog open={open} setOpen={setOpen} />
-</div>
+                <UploadPostDialog open={open} setOpen={setOpen} />
+            </div>
 
 
         </div>
