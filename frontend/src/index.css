@@ -46,6 +46,11 @@
   100% { transform: rotate(360deg); }
 }
 
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .loader {
   border-radius: 50%;
   border-top: 4px solid transparent;
