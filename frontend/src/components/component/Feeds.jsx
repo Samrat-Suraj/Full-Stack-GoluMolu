@@ -6,7 +6,7 @@ import AllPosts from './AllPosts'
 
 const Feeds = () => {
   return (
-    <div className='overflow-auto h-screen flex-1 hidescroll p-2'>
+    <div className='overflow-auto h-full flex-1 hidescroll p-2'>
       <AllStory />
       <div className='h-[2px] bg-black' ></div>
       <CreatePost/>
