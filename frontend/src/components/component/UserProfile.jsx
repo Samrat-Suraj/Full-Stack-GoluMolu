@@ -21,7 +21,6 @@ const UserProfile = () => {
     const [loading, setLoading] = useState(false)
 
     const getPostDataAndSavePost = activeTab === "my-post" ? userProfileById?.posts : userProfileById?.bookmarks
-    console.log(getPostDataAndSavePost)
     const isfollowing = user?.following?.includes(userProfileById?._id)
 
     const handleCoverImageChange = (e) => {
