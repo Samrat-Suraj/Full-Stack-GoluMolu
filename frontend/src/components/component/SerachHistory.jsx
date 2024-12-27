@@ -11,7 +11,7 @@ const SerachHistory = () => {
             <div className="p-6">
                 <h1 className="text-2xl font-semibold text-gray-900 mb-4">Search User</h1>
                 <div className="space-y-2">
-                    <div key={SearchHistory?._id || index} onClick={()=>navigate(`/profile/${SearchHistory?._id}`)} className="flex items-center justify-between p-2 rounded-lg bg-white hover:bg-gray-50 cursor-pointer transition ease-in-out duration-300">
+                    <div key={SearchHistory?._id} onClick={()=>navigate(`/profile/${SearchHistory?._id}`)} className="flex items-center justify-between p-2 rounded-lg bg-white hover:bg-gray-50 cursor-pointer transition ease-in-out duration-300">
                         <div className="flex items-center gap-3">
                             <img
                                 className="h-12 w-12 rounded-full border-2 border-blue-500"
